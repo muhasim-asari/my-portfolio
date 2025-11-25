@@ -1,0 +1,19 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  imageUrl    String?  // Opsional
+  link        String?  // Link ke demo atau repo
+  createdAt   DateTime @default(now())
+}
