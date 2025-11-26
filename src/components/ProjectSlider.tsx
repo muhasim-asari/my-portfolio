@@ -62,7 +62,7 @@ export default function HorizontalScroll({ projects }: { projects: any[] }) {
   return (
     <section
       ref={containerRef}
-      className="relative h-[100vh] bg-[#0a0a0a] overflow-hidden border-t border-white/20"
+      className="relative md:h-[100vh] bg-[#0a0a0a] overflow-hidden border-t border-white/20"
     >
       <div className="block md:hidden py-16 px-4">
         <div className="mb-12">
@@ -184,45 +184,51 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 
 function MobileCard({ project, index }: { project: any; index: number }) {
   return (
-    <div className="w-full bg-secondary border border-white/20 overflow-hidden shadow-hard hover:shadow-none transition-all">
-      {/* Mobile Header */}
-      <div className="flex justify-between items-center px-4 py-3 border-b border-white/10 bg-black">
-        <span className="font-syne text-lg font-bold text-white uppercase truncate max-w-[70%]">
-          {project.title}
+    <a
+      href={project.link || "#"}
+      target="_blank"
+      rel="noopener noreferrer"
+      // Class 'block' agar area klik penuh
+      // Class 'active:...' memberikan efek tombol fisik saat kartu ditekan jari
+      className="block w-full bg-[#111] border-2 border-white shadow-hard mb-6 active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-100"
+    >
+      
+      {/* 1. Header (Browser Style) */}
+      <div className="h-10 border-b-2 border-white bg-white flex items-center px-4 justify-between">
+        <div className="flex gap-2">
+          <div className="w-3 h-3 rounded-full bg-[#0066F7] border border-black"></div>
+          <div className="w-3 h-3 rounded-full bg-white border border-black"></div>
+        </div>
+        <span className="font-mono text-xs font-bold uppercase tracking-widest text-black">
+          PRJ_{(index + 1).toString().padStart(2, '0')}
         </span>
-        <span className="font-mono text-xs text-primary">No. {index + 1}</span>
       </div>
 
-      {/* Mobile Image */}
-      <div className="relative aspect-video w-full bg-gray-900">
+      {/* 2. Image Area */}
+      <div className="relative aspect-video w-full bg-gray-900 border-b-2 border-white">
         {project.imageUrl ? (
           <img
             src={project.imageUrl}
             alt={project.title}
-            className="w-full h-full object-cover grayscale-0"
+            className="w-full h-full object-cover"
           />
         ) : (
-          <div className="flex items-center justify-center h-full text-xs text-gray-500 font-mono">
-            NO IMAGE
+          <div className="flex items-center justify-center h-full text-xs text-[#0066F7] font-mono">
+            [NO SIGNAL]
           </div>
         )}
       </div>
 
-      {/* Mobile Content */}
-      <div className="p-5">
-        <p className="font-mono text-sm text-gray-400 mb-6 leading-relaxed">
+      {/* 3. Info Area */}
+      <div className="p-6 bg-black relative">
+        <h3 className="font-syne text-2xl font-bold text-white uppercase leading-tight mb-2 pr-6">
+          {project.title}
+        </h3>
+        
+        <p className="font-mono text-xs text-gray-400 leading-relaxed line-clamp-3">
           {project.description}
         </p>
-        {project.link && (
-          <a
-            href={project.link}
-            target="_blank"
-            className="block w-full text-center py-3 border border-primary text-primary font-bold uppercase text-sm hover:bg-primary hover:text-black transition-colors"
-          >
-            View Project
-          </a>
-        )}
       </div>
-    </div>
+    </a>
   );
 }

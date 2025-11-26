@@ -1,9 +1,10 @@
 // app/page.tsx
 import Link from "next/link";
 import { getProjects } from "./actions";
-import FadeIn from "../components/FadeIn";
-import Marquee from "../components/Marquee";
-import ProjectSlider from "../components/ProjectSlider";
+import FadeIn from "@/components/FadeIn";
+import Marquee from "@/components/Marquee";
+import ProjectSlider from "@/components/ProjectSlider";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default async function Home() {
   const allProjects = await getProjects();
@@ -13,11 +14,12 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-[#ededed] relative overflow-hidden font-mono selection:bg-[#0066F7] selection:text-black">
+      <ScrollProgress />
       {/* NOISE OVERLAY */}
       <div className="fixed inset-0 z-50 pointer-events-none bg-noise opacity-40 mix-blend-overlay"></div>
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 w-full z-40 px-6 py-6 flex justify-between items-center mix-blend-difference text-white">
+      <nav className="fixed top-0 left-0 w-full z-40 px-6 md:px-12 py-2 md:py-6 flex justify-between items-center mix-blend-difference text-white">
         {/* LOGO IMAGE */}
         <Link href="/" className="relative group block">
           {/* Efek Glow Halus di belakang logo */}
@@ -26,7 +28,7 @@ export default async function Home() {
           <img
             src="/logo-muhammad.svg"
             alt="Muhammad Hasim Logo"
-            className="relative z-10 h-8 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className="relative z-10 h-14 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
         <div className="flex gap-4 items-center">
@@ -50,7 +52,7 @@ export default async function Home() {
           <div className="lg:col-span-7 order-2 lg:order-1 relative z-20">
             <FadeIn direction="up" delay={0.1}>
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-[2px] bg-primary"></div>
+                <div className="w-12 h-[2px] bg-[#0066F7]"></div>
                 <span className="text-primary font-bold tracking-[0.3em] text-xs uppercase">
                   Frontend Developer
                 </span>
@@ -71,8 +73,7 @@ export default async function Home() {
 
             <FadeIn direction="up" delay={0.4}>
               <p className="mt-8 max-w-md text-gray-400 text-lg leading-relaxed border-l border-white/20 pl-6">
-                Membangun pengalaman digital yang imersif. Di balik setiap baris
-                kode, terdapat cerita yang menunggu untuk diungkap.
+                Crafting immersive digital experiences. Behind every line of code lies a story I create as a Frontend Developer.
               </p>
             </FadeIn>
 
@@ -101,7 +102,7 @@ export default async function Home() {
                   {/* FOTO ORANG */}
                   {/* Gunakan foto yang agak gelap/shadowy untuk hasil terbaik */}
                   <img
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop"
+                    src="/profile.jpg"
                     alt="Profile Mystery"
                     className="w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:scale-110 transition-transform duration-1000"
                   />
@@ -131,7 +132,7 @@ export default async function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 mix-blend-difference">
+        <div className="absolute bottom-0 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 mix-blend-difference">
           <div className="w-[1px] h-12 bg-white"></div>
           <span className="text-[10px] uppercase tracking-widest text-white">
             Scroll
@@ -232,7 +233,7 @@ export default async function Home() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/muhasim-asari"
               target="_blank"
               className="text-gray-400 hover:text-white uppercase font-bold text-sm tracking-widest"
             >
