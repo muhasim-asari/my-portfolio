@@ -1,4 +1,5 @@
 // app/login/page.tsx
+import LoginButton from "@/components/LoginButton";
 import { login } from "../actions";
 
 export default function LoginPage() {
@@ -17,12 +18,12 @@ export default function LoginPage() {
             required
             className="p-2 border rounded text-black"
           />
-          <button
-            type="submit"
-            className="bg-black text-white py-2 rounded hover:bg-gray-800"
-          >
-            Masuk
-          </button>
+          <LoginButton />
+          <div className="mt-8 text-center">
+            <a href="/" className="text-[10px] text-gray-400 hover:text-black underline uppercase cursor-pointer">
+                ← Back to Portfolio
+            </a>
+        </div>
         </form>
       </div>
     </div>

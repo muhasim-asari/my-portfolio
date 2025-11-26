@@ -1,4 +1,5 @@
 // app/admin/page.tsx
+import SubmitButton from "@/components/SubmitButton";
 import { addProject, deleteProject, getProjects, logout } from "../actions";
 
 export default async function AdminPage() {
@@ -94,12 +95,7 @@ export default async function AdminPage() {
                 </label>
               </div> */}
 
-              <button
-                type="submit"
-                className="mt-2 bg-black text-white py-3 font-bold uppercase tracking-widest hover:bg-[#0066F7] hover:text-black border-2 border-transparent hover:border-black transition-colors"
-              >
-                Publish
-              </button>
+              <SubmitButton />
             </form>
           </div>
         </div>
