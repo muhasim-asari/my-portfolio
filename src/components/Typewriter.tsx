@@ -44,7 +44,7 @@ export default function Typewriter({ text }: { text: string }) {
       viewport={{ once: true }}
     >
       {letters.map((letter, index) => (
-        <motion.span variants={child} key={index} className="mr-[2px]">
+        <motion.span key={index} className="mr-[2px]">
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}
