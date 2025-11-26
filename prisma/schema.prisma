@@ -5,15 +5,23 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  
+  // 1. URL UTAMA (Untuk Aplikasi berjalan)
+  // Gunakan variabel yang isinya "prisma+postgres://..."
+  url       = env("PRISMA_DATABASE_URL") 
+  
+  // 2. DIRECT URL (Untuk npx prisma db push)
+  // Gunakan variabel yang isinya "postgres://..."
+  directUrl = env("POSTGRES_URL")
 }
 
 model Project {
   id          Int      @id @default(autoincrement())
   title       String
   description String
-  imageUrl    String?  // Opsional
-  link        String?  // Link ke demo atau repo
+  imageUrl    String?
+  link        String?
+  featured    Boolean  @default(false)
   createdAt   DateTime @default(now())
 }
