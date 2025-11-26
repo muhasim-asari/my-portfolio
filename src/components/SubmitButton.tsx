@@ -10,7 +10,7 @@ export default function SubmitButton() {
     <button 
       type="submit" 
       disabled={pending}
-      className="mt-4 w-full bg-black text-white py-4 font-bold uppercase tracking-widest border-2 border-transparent hover:border-black transition-all flex justify-center items-center gap-2 group disabled:bg-gray-400 disabled:cursor-not-allowed hover:bg-lime-400 hover:text-black"
+      className="mt-4 w-full bg-black text-white py-4 font-bold uppercase tracking-widest border-2 border-transparent hover:border-black transition-all flex justify-center items-center gap-2 group disabled:bg-gray-400 disabled:cursor-not-allowed hover:bg-[#0066F7] hover:text-black"
     >
       {pending ? (
         <>
