@@ -18,7 +18,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Muhammad Hasim Asari - Personal Website",
   description: "Creative Developer Portfolio",
 };
 
