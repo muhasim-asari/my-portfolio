@@ -40,7 +40,7 @@ body {
 
   /* Hard Shadow untuk gaya Brutalist */
   .shadow-hard {
-    box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 1);
+    box-shadow: 6px 6px 0px 0px #0066F7;
   }
   .shadow-hard-hover:hover {
     box-shadow: 2px 2px 0px 0px rgba(255, 255, 255, 1);

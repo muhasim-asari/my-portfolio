@@ -128,7 +128,7 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
     <div className="group relative w-[85vw] md:w-[600px] aspect-[16/10] flex-shrink-0 bg-[#111] border-2 border-white shadow-hard transition-all duration-300 hover:shadow-none hover:translate-x-2 hover:translate-y-2 flex flex-col">
       
       {/* Top Bar */}
-      <div className="h-10 border-b-2 border-white bg-white flex items-center px-4 justify-between">
+      <div className="h-10 border-b-2 border-[white] bg-white flex items-center px-4 justify-between">
          <div className="flex gap-2">
             <div className="w-3 h-3 rounded-full bg-[#0066F7] border border-black"></div>
             <div className="w-3 h-3 rounded-full bg-white border border-black"></div>
