@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getProjects } from "./actions";
 import FadeIn from "../components/FadeIn";
 import Marquee from "../components/Marquee";
-import ProjectSlider from "../components/ProjectSlider"; // Import Slider Baru
+import ProjectSlider from "../components/ProjectSlider";
 
 export default async function Home() {
   const allProjects = await getProjects();

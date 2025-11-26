@@ -1,15 +1,15 @@
 // components/ScrollProgress.tsx
-'use client'
+"use client";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function ScrollProgress() {
   const { scrollYProgress } = useScroll();
-  
+
   // useSpring membuat animasi bar-nya mulus (ada efek pegas/membal sedikit)
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   return (

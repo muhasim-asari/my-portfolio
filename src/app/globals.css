@@ -48,13 +48,24 @@ body {
   }
 }
 
+@layer base {
+  html {
+    /* Ini kuncinya: Membuat scroll menjadi halus */
+    scroll-behavior: smooth;
+    
+    /* Ini agar judul section tidak ketutup navbar saat di-klik */
+    /* Sesuaikan nilainya dengan tinggi navbar kamu (misal 100px) */
+    scroll-padding-top: 120px; 
+  }
+}
+
 /* Animasi Marquee (Teks jalan) */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 35s linear infinite;
 }
 
 @layer utilities {

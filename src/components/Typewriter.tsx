@@ -1,5 +1,5 @@
 // components/Typewriter.tsx
-'use client'
+"use client";
 import { motion } from "framer-motion";
 
 export default function Typewriter({ text }: { text: string }) {
