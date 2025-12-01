@@ -4,7 +4,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useTransform, useSpring, useMotionValue } from "framer-motion";
 
-export default function HorizontalScroll({ projects }: { projects: any[] }) {
+export default function ProjectSlider({ projects }: { projects: any[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 

@@ -4,7 +4,6 @@ import { getProjects } from "./actions";
 import FadeIn from "@/components/FadeIn";
 import Marquee from "@/components/Marquee";
 import ProjectSlider from "@/components/ProjectSlider";
-import ScrollProgress from "@/components/ScrollProgress";
 import SnakeGame from "@/components/SnakeGame";
 
 export default async function Home() {
@@ -15,7 +14,6 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-[#ededed] relative overflow-hidden font-mono selection:bg-[#0066F7] selection:text-black">
-      <ScrollProgress />
       {/* NOISE OVERLAY */}
       <div className="fixed inset-0 z-50 pointer-events-none bg-noise opacity-40 mix-blend-overlay"></div>
 
@@ -33,6 +31,9 @@ export default async function Home() {
           />
         </Link>
         <div className="flex gap-4 items-center">
+          <Link href="/services" className="hidden md:block font-bold text-xs uppercase tracking-widest hover:text-primary transition-colors">
+            Services
+          </Link>
           <Link
             href="#contact"
             className="border-2 border-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition-all font-bold text-sm uppercase"
