@@ -103,10 +103,16 @@ export default async function Home() {
                 <div className="relative w-full h-full bg-[#111] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group">
                   {/* FOTO ORANG */}
                   {/* Gunakan foto yang agak gelap/shadowy untuk hasil terbaik */}
-                  <img
+                  <img 
                     src="/profile.webp"
-                    alt="Profile Mystery"
-                    className="w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:scale-110 transition-transform duration-1000"
+                    alt="Profile Mystery" 
+                    // 1. Prioritas Tinggi (Download duluan)
+                    fetchPriority="high" 
+                    // 2. Jangan Lazy Load (Langsung tampil)
+                    loading="eager"
+                    // 3. Decode Asynchronous (Biar scroll ga macet saat gambar rendering)
+                    decoding="async"
+                    className="w-full h-full object-cover grayscale brightness-75 contrast-125 mix-blend-luminosity group-hover:scale-105 transition-transform duration-1000 ease-out"
                   />
 
                   {/* Overlay Gradient (Supaya foto menyatu dengan background bawah) */}

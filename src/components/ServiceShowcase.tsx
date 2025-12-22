@@ -191,6 +191,9 @@ function PortfolioSlider({ items, onImageClick }: { items: PortfolioItem[], onIm
               <img 
                 src={item.src} 
                 alt={item.alt} 
+                loading="lazy"
+                fetchPriority="low"
+                decoding="async"
                 className="w-full h-full object-cover border border-white/20 group-hover:grayscale-0 grayscale transition-all duration-500 pointer-events-none" // pointer-events-none penting biar gambar ga ke-drag browser
               />
               <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
