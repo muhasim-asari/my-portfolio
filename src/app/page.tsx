@@ -31,7 +31,7 @@ export default async function Home() {
           />
         </Link>
         <div className="flex gap-4 items-center">
-          <Link href="/services" className="hidden md:block font-bold text-xs uppercase tracking-widest hover:text-primary transition-colors">
+          <Link href="/services" className="block font-bold text-xs uppercase tracking-widest hover:text-primary transition-colors">
             Services
           </Link>
           <Link

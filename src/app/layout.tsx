@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Syne, Space_Mono } from "next/font/google"; // Import font baru
 import "./globals.css";
 import { LanguageProvider } from "../context/LanguageContext";
+import PageLoader from "@/components/PageLoader";
 
 // Font untuk Judul (Bold & Artsy)
 const syne = Syne({
@@ -34,6 +35,7 @@ export default function RootLayout({
         className={`${syne.variable} ${spaceMono.variable} bg-[#0f0f0f] text-white antialiased`}
       >
         <LanguageProvider>
+          <PageLoader />
           {children}
         </LanguageProvider>
       </body>
