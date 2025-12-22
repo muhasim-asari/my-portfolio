@@ -104,7 +104,7 @@ export default async function Home() {
                   {/* FOTO ORANG */}
                   {/* Gunakan foto yang agak gelap/shadowy untuk hasil terbaik */}
                   <img
-                    src="/profile.jpg"
+                    src="/profile.webp"
                     alt="Profile Mystery"
                     className="w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:scale-110 transition-transform duration-1000"
                   />
