@@ -216,44 +216,7 @@ export default async function Home() {
           </div>
         )}
       </div>
-
-      {/* --- PLAYGROUND SECTION --- */}
-      <section className="py-24 px-4 bg-background border-t border-white/10 relative overflow-hidden">
-         {/* Background Decoration */}
-         <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-primary rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
-
-         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            
-            {/* Text Area */}
-            <div className="text-left">
-               <div className="text-left">
-               <FadeIn direction="right">
-                  <div className="inline-block px-3 py-1 bg-white text-black font-bold uppercase text-[10px] tracking-widest rounded-full mb-4">
-                     Procrastination Zone
-                  </div>
-                  <h2 className="font-syne text-4xl md:text-6xl font-bold uppercase text-white mb-6">
-                     Code not working? <br/>
-                     <span className="text-primary">Play Snake.</span>
-                  </h2>
-                  <p className="font-mono text-gray-400 text-sm leading-relaxed mb-8 border-l-2 border-primary pl-4">
-                     Forget about your bugs for a minute. Try to beat the high score instead. 
-                     Warning: Highly addictive and not productive at all.
-                  </p>
-                  <div className="font-mono text-xs text-primary animate-pulse">
-                     ↓ WASTE SOME TIME
-                  </div>
-               </FadeIn>
-            </div>
-            </div>
-
-            {/* Game Area */}
-            <FadeIn direction="left">
-               <SnakeGame/>
-            </FadeIn>
-
-         </div>
-      </section>
-
+      
       {/* FOOTER */}
       <footer
         id="contact"

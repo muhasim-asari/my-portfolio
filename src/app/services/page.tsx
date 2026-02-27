@@ -54,34 +54,6 @@ export default function ServicesPage() {
          {/* 2. PEMISAH (Divider) */}
          <div className="my-24 border-t border-dashed border-white/20"></div>
 
-         {/* 3. KALKULATOR MMT (Dipisah di bawah agar fokus) */}
-         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-               <h2 className="font-syne text-4xl font-bold uppercase text-white mb-6">
-                  {lang === 'id' ? "Hitung Biaya" : "Estimate Cost"}
-               </h2>
-               <p className="text-gray-400 mb-8 leading-relaxed">
-                  {lang === 'id' 
-                     ? "Gunakan kalkulator ini untuk mendapatkan perkiraan harga cetak MMT/Banner. Harga dapat berubah tergantung quantity dan kerumitan desain." 
-                     : "Use this calculator to get an estimated price for MMT/Banner printing. Prices may vary depending on quantity and design complexity."}
-               </p>
-               {/* Info Box */}
-               <div className="bg-white/5 border border-white/10 p-6">
-                  <h4 className="text-primary font-bold uppercase text-sm mb-2">Notes:</h4>
-                  <ul className="list-disc list-inside text-xs text-gray-400 space-y-1 font-mono">
-                     <li>Harga per meter persegi (m²)</li>
-                     <li>Minimal order 1 meter</li>
-                     <li>File siap cetak lebih cepat diproses</li>
-                  </ul>
-               </div>
-            </div>
-
-            {/* Komponen Kalkulator */}
-            <div className="relative">
-               <MmtCalculator />
-            </div>
-         </div>
-
       </div>
     </main>
   )
