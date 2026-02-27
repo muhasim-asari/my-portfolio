@@ -4,6 +4,7 @@ import { Syne, Space_Mono } from "next/font/google"; // Import font baru
 import "./globals.css";
 import { LanguageProvider } from "../context/LanguageContext";
 import PageLoader from "@/components/PageLoader";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Font untuk Judul (Bold & Artsy)
 const syne = Syne({
@@ -38,6 +39,7 @@ export default function RootLayout({
           <PageLoader />
           {children}
         </LanguageProvider>
+        <SpeedInsights/>
       </body>
     </html>
   );
